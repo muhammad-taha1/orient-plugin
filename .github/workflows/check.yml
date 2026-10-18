@@ -10,3 +10,5 @@ jobs:
           node-version: 24
       - run: node scripts/check.mjs
       - run: node scripts/pack.mjs
+      - name: dist/ is up to date
+        run: git diff --exit-code -- dist

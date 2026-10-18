@@ -4,7 +4,7 @@ Find a mentor who fits your goals and book a paid 1:1 video session, right from 
 
 ## Install
 
-- **Claude or ChatGPT:** download the zip for your assistant ([Claude](https://orient-path.ca/plugin/orient-claude.zip), [ChatGPT](https://orient-path.ca/plugin/orient-chatgpt.zip)) and upload it on the assistant's Plugins page.
+- **Claude or ChatGPT:** download the zip for your assistant ([Claude](https://github.com/muhammad-taha1/orient-plugin/raw/main/dist/orient-claude.zip), [ChatGPT](https://github.com/muhammad-taha1/orient-plugin/raw/main/dist/orient-chatgpt.zip)) and upload it on the assistant's Plugins page.
 - **Claude, as a marketplace** (gets updates): on the Plugins page choose **Add marketplace**, enter `muhammad-taha1/orient-plugin`, then install **Orient**. In Claude Code:
 
       /plugin install orient --marketplace muhammad-taha1/orient-plugin
