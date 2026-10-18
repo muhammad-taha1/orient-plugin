@@ -1,0 +1,41 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "orient",
+  "version": "1.0.0",
+  "description": "Find a mentor who fits your goals, see their open times in your time zone, and book a paid 1:1 video session on Orient.",
+  "author": { "name": "Orient", "url": "https://orient-path.ca", "email": "info@orient-path.ca" },
+  "homepage": "https://orient-path.ca",
+  "repository": "https://github.com/muhammad-taha1/orient-plugin",
+  "license": "MIT",
+  "keywords": ["mentorship", "career", "mentors", "coaching", "booking"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Orient",
+        "shortDescription": "Find and book career mentors",
+        "longDescription": "Orient connects you with experienced mentors for paid 1:1 video sessions. Tell the assistant what you want help with and Orient finds mentors who fit, shows their profiles, ratings and prices, and lists their open times in your time zone.\n\nOnce you connect your Orient account, you can book a session: Orient reserves the time and gives you a link to pay on orient-path.ca. Your card is only charged once the mentor accepts. You can also check your upcoming sessions, get the meeting link, and review a mentor after a session.\n\nCancelling, rescheduling, payments and profile changes stay on the Orient website.",
+        "developerName": "Orient",
+        "category": "Education",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://orient-path.ca",
+        "privacyPolicyURL": "https://orient-path.ca/pages/privacy-policy",
+        "termsOfServiceURL": "https://orient-path.ca/pages/terms-and-conditions",
+        "defaultPrompt": [
+          "Find me a mentor in product management who has worked at a startup.",
+          "What times is this mentor free next week? I'm in Toronto.",
+          "Show my upcoming Orient sessions."
+        ],
+        "brandColor": "#1E3D2F",
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/icon.png",
+        "screenshots": [
+          "./assets/screenshots/1-mentor-results.png",
+          "./assets/screenshots/2-mentor-profile.png",
+          "./assets/screenshots/3-slot-picker.png",
+          "./assets/screenshots/4-booking-card.png",
+          "./assets/screenshots/5-booking-confirmed.png"
+        ]
+      }
+    }
+  }
+}

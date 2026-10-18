@@ -1,0 +1,11 @@
+{
+  "name": "orient",
+  "displayName": "Orient",
+  "version": "1.0.0",
+  "description": "Find a mentor who fits your goals, see their open times in your time zone, and book a paid 1:1 video session on Orient.",
+  "author": { "name": "Orient", "url": "https://orient-path.ca", "email": "info@orient-path.ca" },
+  "homepage": "https://orient-path.ca",
+  "repository": "https://github.com/muhammad-taha1/orient-plugin",
+  "license": "MIT",
+  "keywords": ["mentorship", "career", "mentors", "coaching", "booking"]
+}
