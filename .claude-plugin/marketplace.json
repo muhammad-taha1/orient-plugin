@@ -1,0 +1,12 @@
+{
+  "name": "orient",
+  "description": "Orient's plugin for Claude: find, book and prepare for 1:1 mentoring sessions.",
+  "owner": { "name": "Orient", "email": "info@orient-path.ca" },
+  "plugins": [
+    {
+      "name": "orient",
+      "source": "./",
+      "description": "Find a mentor who fits your goals, see their open times in your time zone, and book a paid 1:1 video session on Orient."
+    }
+  ]
+}

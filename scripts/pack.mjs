@@ -14,6 +14,7 @@ const TARGETS = {
   claude: { files: [".claude-plugin/plugin.json", ".mcp.json", "README.md", "LICENSE"], dirs: ["skills"] },
 };
 const MCP_CONFIGS = new Set(["mcp.json", ".mcp.json"]);
+const TEXT_FILE = /\.(md|json)$|(^|\/)LICENSE$/;
 
 const urlFlag = process.argv.indexOf("--url");
 const urlOverride = urlFlag === -1 ? undefined : process.argv[urlFlag + 1];
@@ -34,7 +35,9 @@ for (const [target, { files, dirs }] of Object.entries(TARGETS)) {
 }
 
 function contents(path) {
-  const data = readFileSync(join(root, path));
+  const raw = readFileSync(join(root, path));
+  // Windows checkouts may have CRLF; ship LF so every platform parses the same bytes.
+  const data = TEXT_FILE.test(path) ? Buffer.from(raw.toString("utf8").replace(/\r\n/g, "\n")) : raw;
   if (!urlOverride || !MCP_CONFIGS.has(path)) return data;
   const config = JSON.parse(data.toString("utf8"));
   for (const server of Object.values(config.mcpServers)) server.url = urlOverride;
