@@ -39,7 +39,7 @@ A booking only pays off if the user shows up prepared, so after each step offer 
 - **Pick what fits the moment:**
   - *Before booking:* offer to draft the `notes` (what they want to cover) from what you know of their goal. The mentor prepares from it.
   - *Right after `book_session`:* a tentative calendar hold at the slot, in the user's time zone, titled with the mentor's name and with `manageUrl` in the description. If they haven't paid yet, a reminder to pay is the alternative.
-  - *Once `get_session` shows it confirmed:* add the meeting link to the hold (or create the event), and offer a reminder shortly before the session.
+  - *Once `get_session` shows it confirmed:* add the meeting link to the hold (or create the event), and offer a reminder shortly before the session. Without a calendar tool, give the session's `calendar` link that fits their calendar instead (`googleUrl`, `outlookUrl`, or `icsUrl` for Apple and desktop Outlook). The card already shows these, so only mention them in text when no card is shown.
   - *Before the session:* offer three or four questions to ask, tailored to the mentor's background (`get_mentor`) and the user's goal.
   - *After a past session:* offer to write up takeaways and action items, then a review (confirm wording first, as above). If it fits, offer to look at another time with the same mentor.
 - **Keep the calendar true.** If the user says they cancelled or rescheduled on the website, offer to remove or move the entry you made.

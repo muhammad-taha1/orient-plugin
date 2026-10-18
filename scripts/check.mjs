@@ -62,7 +62,8 @@ if (readmeWords < 40) fail(`README.md has ${readmeWords} words, Claude needs at 
 for (const dir of readdirSync(join(root, "skills"))) {
   const path = `skills/${dir}/SKILL.md`;
   if (!existsSync(join(root, path))) { fail(`${path} is missing`); continue; }
-  const frontmatter = text(path).match(/^---\n([\s\S]*?)\n---/)?.[1] ?? "";
+  // Windows checkouts may have CRLF line endings.
+  const frontmatter = text(path).replace(/\r\n/g, "\n").match(/^---\n([\s\S]*?)\n---/)?.[1] ?? "";
   if (!new RegExp(`^name: ${dir}$`, "m").test(frontmatter)) fail(`${path} frontmatter name must be "${dir}"`);
   if (!/^description: \S/m.test(frontmatter)) fail(`${path} needs a description`);
 }
