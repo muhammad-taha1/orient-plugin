@@ -8,7 +8,9 @@ Find a mentor who fits your goals and book a paid 1:1 video session, right from 
 
       /plugin install orient --marketplace muhammad-taha1/orient-plugin
 
-- **ChatGPT:** add **Orient** from the Plugins directory once it's listed; that brings the connector with it. Until then, turn on Developer mode (Settings → Security) and add a custom MCP server with the URL `https://orient-path.ca/api/mcp`. Uploading the ChatGPT zip yourself installs only the skills: ChatGPT drops `mcp.json` from uploaded archives, so the tools won't appear. [The ChatGPT zip](https://github.com/muhammad-taha1/orient-plugin/raw/main/dist/orient-chatgpt.zip) is the package for OpenAI's plugin portal.
+- **ChatGPT:** add **Orient** from the Plugins directory once it's listed.
+  - **Workspace (Business, Enterprise, Edu):** until it's listed, an owner or admin, or a member with the **Upload plugins** and **Create plugins with MCPs** permissions, can upload [the ChatGPT zip](https://github.com/muhammad-taha1/orient-plugin/raw/main/dist/orient-chatgpt.zip) on the web: **Admin console → your workspace → Plugins → Add → Upload plugin**. Uploading doesn't connect Orient. Each person then opens the plugin and clicks **Connect** to sign in.
+  - **Personal account:** there's no upload option, so add a custom MCP server with the URL `https://orient-path.ca/api/mcp` in Developer mode.
 
 ## Use it
 
