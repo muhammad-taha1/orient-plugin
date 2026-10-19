@@ -1,9 +1,9 @@
 ---
-name: orient
-description: Find, compare and book a mentor on Orient, check the user's Orient sessions, or, for Orient mentors, handle booking requests and weekly hours. Use when the user wants career or industry advice from an experienced person, asks for a mentor or coach, wants to book a 1:1 session, asks about sessions they've booked on Orient, wants to prepare for or follow up on an Orient session, or is an Orient mentor asking about requests or availability.
+name: find-and-book-mentor
+description: Find, compare and book a mentor on Orient, and look after the user's own Orient sessions. Use when the user wants career or industry advice from an experienced person, asks for a mentor or coach, wants to book a 1:1 session, asks what times a mentor is free, asks about sessions they've booked on Orient, wants to prepare for or follow up on a session, or wants to review a mentor — even if they never say "Orient".
 ---
 
-# Orient mentoring
+# Orient mentoring (for mentees)
 
 Orient connects mentees with mentors for paid 1:1 video sessions. Use the Orient connector's tools; don't invent mentors, prices or times.
 
@@ -43,16 +43,6 @@ A booking only pays off if the user shows up prepared, so after each step offer 
   - *Before the session:* offer three or four questions to ask, tailored to the mentor's background (`get_mentor`) and the user's goal.
   - *After a past session:* offer to write up takeaways and action items, then a review (confirm wording first, as above). If it fits, offer to look at another time with the same mentor.
 - **Keep the calendar true.** If the user says they cancelled or rescheduled on the website, offer to remove or move the entry you made.
-
-## For mentors
-
-Only for users signed in with an Orient mentor account; anyone else gets a "for Orient mentors" message, so don't retry.
-
-- `list_booking_requests` shows requests waiting for an answer: who, when, and the note they left. Offer the ids only when needed.
-- `accept_booking_request` **charges the mentee's held payment**. Say who and when in one line and get an explicit yes before calling it. `decline_booking_request` releases their card hold; confirm it the same way.
-- After an accept, the same calendar and reminder offers apply, and the mentee's note is a good basis for a short prep.
-- Only pending requests can be accepted or declined here. A confirmed session can't be cancelled here — give the `manageUrl`.
-- `get_my_availability` and `set_my_availability` need the mentor's time zone (an IANA name); ask if you don't know it. Hours are 24-hour `HH:mm`, one range per day. `set_my_availability` changes only the days you pass, so send just what the mentor asked to change, then read the saved week back to them.
 
 ## Stays on the website
 

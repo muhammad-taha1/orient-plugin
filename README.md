@@ -18,7 +18,7 @@ To book, connect your Orient account when the assistant asks. Orient reserves th
 ## What's included
 
 - **Orient connector**: the remote MCP server at `https://orient-path.ca/api/mcp`. Searching and browsing work without an account; booking and your sessions use your Orient sign-in (OAuth).
-- **Orient skill**: tells the assistant how to search, offer only real open times, and keep booking replies short.
+- **Orient skills**: `find-and-book-mentor` tells the assistant how to search, offer only real open times, and keep booking replies short; `orient-mentor` covers mentors answering booking requests and setting weekly hours.
 
 ## Data
 
