@@ -4,10 +4,11 @@ Find a mentor who fits your goals and book a paid 1:1 video session, right from 
 
 ## Install
 
-- **Claude or ChatGPT:** download the zip for your assistant ([Claude](https://github.com/muhammad-taha1/orient-plugin/raw/main/dist/orient-claude.zip), [ChatGPT](https://github.com/muhammad-taha1/orient-plugin/raw/main/dist/orient-chatgpt.zip)) and upload it on the assistant's Plugins page.
-- **Claude, as a marketplace** (gets updates): on the Plugins page choose **Add marketplace**, enter `muhammad-taha1/orient-plugin`, then install **Orient**. In Claude Code:
+- **Claude:** in **Customize → Plugins → Add**, either choose **Add marketplace** and enter `muhammad-taha1/orient-plugin` (gets updates), then install **Orient**, or choose **Upload plugin** with [the Claude zip](https://github.com/muhammad-taha1/orient-plugin/raw/main/dist/orient-claude.zip). Then open the plugin's **Connectors** tab and connect **Orient**: installing adds the skills, but the tools only work once the connector is connected. Start a new chat afterwards. In Claude Code the connector loads with the plugin:
 
       /plugin install orient --marketplace muhammad-taha1/orient-plugin
+
+- **ChatGPT:** add **Orient** from the Plugins directory once it's listed; that brings the connector with it. Until then, turn on Developer mode (Settings → Security) and add a custom MCP server with the URL `https://orient-path.ca/api/mcp`. Uploading the ChatGPT zip yourself installs only the skills: ChatGPT drops `mcp.json` from uploaded archives, so the tools won't appear. [The ChatGPT zip](https://github.com/muhammad-taha1/orient-plugin/raw/main/dist/orient-chatgpt.zip) is the package for OpenAI's plugin portal.
 
 ## Use it
 
